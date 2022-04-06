@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko"> <!-- en으로 하면 한국어로 작성해도 영어로 인식함 > ko로 -->
+<head>
+    <meta charset="UTF-8"> <!-- 한글(영어를 제외한 모든 언어) 깨지지 않게 함-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 적응형 웹, 접속하는 방식(모바일, 모바일 기기, 웹)에 따라 바뀜-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹, 접속 기기에 맞춰 바뀜-->
+    <title>Document</title> <!-- 탭 이름으로 뜸-->
+</head>
+<body>
+    
+    <a href="https://www.naver.com">네이버 링크</a>
+    <!-- href는 필수 속성, 태그 사이에 텍스트를 넣어 링크를 검-->
+    <!-- a태그는 인라인 속성이기 때문에 줄바꿈 안 됨 -->
+    <a href="https://google.com" target="_blank">구글 링크</a>
+    <!-- target 속성 : 새탭에서 링크 띄움, 실시간 검증할 때 사용(우편번호 검색) -->
+    <a href="../02 컨텐츠태그/2. 목록태그.html">목록태그 학습 페이지</a>
+    <!-- 상대 경로, ../ 상위 폴더로 가기, ./ 하위 폴더로 가기(생략 가능)-->
+
+    <!-- 
+        자식 관계 블록-인라인 O, 인라인-인라인 O
+                 *인라인-블록X*
+        h태그(블록태그)의 자식으로 a태그(인라인태그)를 건다
+    <h1>
+        <a href="../03 인라인태그/1. 링크태그.html">목록 태그 학습하기</a>
+    </h1>
+    -->
+    <a href="tel:+82102749256">문의전화</a>
+    <!-- 전화걸기 +82: 국가번호, 10: 010, 모바일 페이지 -->
+    <a href="mailto:sokoving@gmail.com"></a>
+    <!-- 메일 연결 mail to -->
+
+    <div id="top">  <!-- 아이디 지정-->
+        <h1>안녕안녕~~</h1>
+        <p style="height: 2000px">
+            반가워요~~ 오늘은 수요일!
+        </p>
+    </div>
+
+    <a href="#top">위로 이동</a>
+    <!--#id, id의 영역으로 감
+    부드럽게 움직이는 건 자바 스크립-->
+
+</body>
+</html>
