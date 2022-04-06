@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>목록 태그 학습하기</h1>
+
+    <section id="cart-list">
+        <h2>장바구니 목록(순서가 중요하지 않음~엉망이 돼도 돼~)</h2>
+        <ul>
+            <li>우유</li>
+            <li>양파</li>
+            <li>치즈</li>
+                <ul>
+                    <li>체다 치즈</li>
+                    <li>까망베르 치즈</li>
+                </ul>
+        </ul>
+    </section>
+
+    <section id="noodle recipe">
+        <h2>라면 레시피(순서가 중요한 목록~순서 바뀌면 안 돼~)</h2>
+        <ol>
+            <li>물 끓이기</li>
+            <li>면, 스프 넣기</li>
+            <li>4분 후 맛있게 먹기</li>
+        </ol>
+<!-- li는 단독으로 사용 불가. ul이나 ol 하위로 무조건 들어가야 함 -->
+<!-- 직속자식은 무조건 li, li의 자식은 ul, ol 가능 -->
+    </section>
+    
+    <article>
+        <h2>2022년 주가 종합</h2>
+
+        <p>
+             뉴스 기사 내용 어쩌구저쩌구 쓰면 됨 <br>
+             그냥 엔터를 치면 그냥 내려가느냐? <br>
+             안 되고 br태그를 일단 넣어봅시다.<br>
+            <hr>
+            문단 구분은 hr을 씁니다. <br>
+            기본값은 회색선인데 그건 css로 고칩니다. <br>
+            hr, br 둘 다 단독으로 써도 되는 태그입니다. <br>
+            
+        </p>
+    </article>
+</body>
+</html>
