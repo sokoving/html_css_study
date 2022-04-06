@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#">
+
+        # 이름: <input type="text" value="김철수" disabled> <br>
+        # 비밀번호: <input type="password"> <br>
+        # 이메일: <input type="email" placeholder="aaa@gmail.com"> <br>
+
+        # 취미:
+        <input type="checkbox"> 게임
+        <input type="checkbox" checked> 축구
+        <input type="checkbox" disabled> 공연관람 <br>
+        
+        # 메일 수신 여부:
+        <input type="radio" name="mail-varify" checked> 예
+        <input type="radio" name="mail-varify"> 아니오 <br>
+
+        # 파일: <input type="file" multiple> <br>
+
+        # 범위 <input type="range" min="0" max="10" value="5"> <br>
+
+        # 주문 수량:
+        <input type="number" value="1"> <br>
+
+        <input type="hidden" name="abc" value="메롱">
+        <!--사용자 몰래 abc=메롱을 서버로 전송 
+            사용자가 입력할 필요가 없는 데이터, 
+            넘어간다는 걸 몰라도 되는 데이터 전송-->
+
+        <button type="button">그냥 버튼</button> <!--원하는 기능을 넣는다-->
+        <button type="reset">초기화 버튼</button> <!-- 특정 기능이 있다-->
+        <button type="submit">전송 버튼</button> <!-- 입력 데이터를 서버로 전송
+                                                    추가 질문을 넣어 쿠션을 넣자-->
+
+    </form>
+
+</body>
+</html>
+
+<!--
+★input★ 사용자에게 입력받을 데이터 양식 지정
+          빈 태그
+★input 요소
+ type : 입력받을 데이터의 종류(하단 참조)
+ name : 양식의 이름 지정
+ placeholder : 사용자가 입력할 값의 힌트
+ email : 자동 검증이 기본으로 들어가는 요소
+
+    value : 기본값
+    disabled : 입력 불가능 (회원정보 수정 시 변경 불가한 항목에)
+-->
