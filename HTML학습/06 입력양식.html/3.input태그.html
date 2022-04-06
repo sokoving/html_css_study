@@ -10,32 +10,32 @@
     
     <form action="#">
 
-        # 이름: <input type="text" value="김철수" disabled> <br>
+        # 이름: <input type="text" value="김철수" disabled> <br>    <!-- disabled 선택 불가-->
         # 비밀번호: <input type="password"> <br>
-        # 이메일: <input type="email" placeholder="aaa@gmail.com"> <br>
+        # 이메일: <input type="email" placeholder="aaa@gmail.com"> <br> <!-- placeholder 양식 힌트-->
 
         # 취미:
         <input type="checkbox"> 게임
-        <input type="checkbox" checked> 축구
+        <input type="checkbox" checked> 축구            <!-- checked 기본값으로 체크되어 있다-->
         <input type="checkbox" disabled> 공연관람 <br>
         
         # 메일 수신 여부:
-        <input type="radio" name="mail-varify" checked> 예
-        <input type="radio" name="mail-varify"> 아니오 <br>
+        <input type="radio" name="mail-verify" checked> 예  <!-- name 양식의 이름 지정-->
+        <input type="radio" name="mail-verify"> 아니오 <br> <!-- 선택지를 같은 name으로 설정하여 하나만 선택하게 함-->
 
-        # 파일: <input type="file" multiple> <br>
+        # 파일: <input type="file" multiple> <br>   <!-- multiple 여러 파일을 올릴 수 있다-->
 
-        # 범위 <input type="range" min="0" max="10" value="5"> <br>
+        # 범위 <input type="range" min="0" max="10" value="5"> <br> <!-- value 초기값 설정-->
 
         # 주문 수량:
-        <input type="number" value="1"> <br>
+        <input type="number" value="1" max="10"> <br>
 
         <input type="hidden" name="abc" value="메롱">
-        <!--사용자 몰래 abc=메롱을 서버로 전송 
+        <!--사용자 몰래 데이터(abc=메롱)를 서버로 전송 
             사용자가 입력할 필요가 없는 데이터, 
-            넘어간다는 걸 몰라도 되는 데이터 전송-->
+            넘어간다는 걸 몰라도 되는 데이터를 전송할 때 숨겨놓는다-->
 
-        <button type="button">그냥 버튼</button> <!--원하는 기능을 넣는다-->
+        <button type="button">그냥 버튼</button> <!-- 개발자 커스텀 기능을 넣는다-->
         <button type="reset">초기화 버튼</button> <!-- 특정 기능이 있다-->
         <button type="submit">전송 버튼</button> <!-- 입력 데이터를 서버로 전송
                                                     추가 질문을 넣어 쿠션을 넣자-->
