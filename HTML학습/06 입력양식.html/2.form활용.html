@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 네이버에서 검색할 수 있는 form 만들기 -->
+    <form action="https://search.naver.com/search.naver"> <!--절대경로(타사이트)-->
+        <input type="text" name="query"> <!--검색어는 query로 네이버에서 지정(이름 붙이기)-->
+        <button type="submit">검색</button>
+    </form>
+    <br><br><br><br>
+<!-- 네이버 로그인할 수 있는 form 만들기 -->
+    <form action="https://nid.naver.com/nidlogin.login" method="post">
+        <input type="text" name="id"> <br>
+        <input type="password" name="pw"> <br>
+        <button type="submit">로그인</button>
+    </form>
+
+</body>
+</html>

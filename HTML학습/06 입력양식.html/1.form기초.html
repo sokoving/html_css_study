@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/login" method="post" autocomplete="off" novalidate>
+        <input name="id" type="email" placeholder="아이디를 입력하세요."> <br>
+        <input name="pw" type="password" placeholder="비밀번호를 입력하세요."> <br>
+        <button type="submit">로그인</button>
+    </form>
+    
+</body>
+</html>
+
+<!-- 
+ 아직 결정되지 않은 값은 #으로 씀, 나중에 씀
+★form★ 웹 서버에 정보를 제출하기 위한 양식을 정의하는 요소
+ action : 입력 데이터를 어디로 전송할지 쓴다 
+          전송한 정보를 처리할 URL을 쓴다
+ name : 고유한 양식의 이름
+ method : 서버로 전송한 HTTP 방식
+    get:입력값이 주소창에 남는다(링크를 복붙 가능)
+    post: 입력값이 주소창에 안 남는다(보안사항)
+    입력 안 하면 get 기본
+ autocomplete : 사용자가 이전에 입력한 값으로 자동완성 기능을 사용할 것인지 여부
+    on / off
+ novalidate : 서버로 전송 시 양식 데이터의 유효성을 검사하지 않도록 지정
+              자동 검증하지 않음
+              html5에서는 별도 값을 입력하지 않아도 된다.
+ taget : 서버로 전송 후 응답받을 방식을 지정
+    _self / _blank
+
+
+★input★ 사용자에게 입력받을 데이터 양식 지정
+          빈 태그
+ type : 입력받을 데이터의 종류(하단 참조)
+ name : 양식의 이름
+ placeholder : 사용자가 입력할 값의 힌트
+               
+
+ email : 자동 검증이 기본으로 들어감.
+
+    ip와 url 
+    https://github.com/sokoving/git_study
+                ip    /  url
+-->
