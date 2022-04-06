@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        span {
+            font-size: 15;
+            font-style: italic;
+            color: orange;
+        }
+        /* span은 기본 디자인 없음. */
+        mark {
+            background: transparent;
+            color: red;
+            font-style: italic;
+                }
+        /* mark의 기본 디자인인 형광펜 표시를 투명으로, 디자인 변경 */
+    </style>
+
+</head>
+<body>
+    
+    <h1>
+        <abbr title="Hyper Text Markup Language">html</abbr>강조태그 학습
+        <!-- abbr 주로 약어를 처리할 때 쓰는 강조태그 
+            밑에 실선의 디자인은 css로-->
+    </h1>
+<!-- 강조 태그:기본 스타일은 상관없다(css로 수정 가능)-->
+    <p>
+        1절 동해 물과 <mark>백두산</mark>이 마르고 닳도록
+        하느님이 보우하사 우리나라 만세. <br>
+
+        2절 남산 위에 저 <strong>소나무</strong>, 철갑을 두른 듯
+        바람 서리 불변함은 우리 기상일세. <br>
+
+        3절 <em>가을 하늘</em> 공활한데 높고 구름 없이
+        밝은 달은 우리 가슴 일편단심일세. <br>
+
+        4절 이 기상과 맘으로 충성을 다하여
+        괴로우나 즐거우나 <b>나라 사랑하세.</b> <br>
+        
+        후렴 <span>무궁화</span> 삼천리 화려 강산 대한 사람, 대한으로 길이 보전하세
+        <!-- span은 구조적 의미에서는 강조의 뜻 없음. 
+            블록에는 div, 인라인에는 span-->
+        <hr>
+        <!-- br(엔터), hr(문단 구분)은 빈 태그(닫힌 태크 필요없음) -->
+    </p>
+
+</body>
+</html>
