@@ -36,19 +36,53 @@ HTML(Hyper Text Markup Language)
 	<a href="www.naver.com" class="naver-link">네이버로 가기</a>
 	<앵커 태그 링크주소="www.naver.com" 태그별칭="naver-link">네이버로 가기</앵커 태그>
 
+논리 속성(select, disabled)은 쓰면 적용, 안 쓰면 안 적용
+
+개별 속성 : 특정 태그에 특정하게 쓸 수 있는 속성
+  ex) a-href / img-src
+전역 속성 : 태그 상관없이 쓸 수 있는 속성
+ class : 요소의 별칭을 지정.
+		보통 그룹화할 때 사용.
+		한 요소에 여러 class 지정 가능
+id : 요소에 고유의 식별자를 정의
+	 보통 class, id는 특정 요소를 단독으로 지칭할 때 씀
+	 한 id, 한 요소
+
+style : css 인라인 스타일
+title : 요소에 마우스 포커스했을 때 설명 지정
+	  abbr의 속성이기도 함
+data-* : JavaScript할 때 씀
+
 #부모요소 / 자식요소 - 형제요소
  태그는 중첩 기능을 통해 부모 자식요소로 단계적 구조 만들 수 있음.
-<nav>			#부모
-  <h1>대전 맛집></h1>	#자식1
-  <ul>			#자식2
-    <li>성심당1</li>	#후손1
+<nav>			<!--부모-->
+  <h1>대전 맛집></h1>	<!--자식1-->
+  <ul>			<!--자식2-->
+    <li>성심당1</li>	<!--후손1-->
     <li>성심당2</li>
     <li>성심당3</li>
   </ul>
 </nav>
 
-#빈 태그
+#빈 태그 : 닫힘 태그 없이 단독으로 쓰인다.
+		  속성 부여 불가
 hr
 br
 img
 metas
+
+#상대경로: 나를 기준으로 찾아감
+		 ./ : 현재 폴더에서 진입함(생략 가능)
+		 ../ : 상위 폴더로 나가서 진입함
+ 절대경로: 고유 주소로 찾아감(풀경로)
+		  파일 주소가 유동적일 때 사용
+		E:\git_study
+		http://~~
+
+#특수문자 기호
+&nbsp; : 스페이스 공백
+&lt; : <
+&gt; : >
+&amp; : &
+
+추가 내용 : https://www.freeformatter.com/html-entities.html
