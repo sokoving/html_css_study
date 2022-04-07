@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* 클래스선택자 
+: 개별 태그를 클래스로 그룹화
+   클래스 이름 앞에 .을 붙여 구분 
+   스타일 지정과 클래스 지정 선후는 상관없다*/
+        .orang {
+            color: orange;
+        }
+/* 아이디선택자
+ : 단 하나의 요소만 아이디로 지정(중요)
+    아이디 이름 앞에 #을 붙여 구분 */
+        #big {
+            font-size: 1.5em;  /* 포트 사이즈 1.5배 */
+        }
+
+        .reverse {
+            transform: rotate(180deg); /* 180도 회전 */
+            width: fit-content;
+        }
+
+        .shadow { /*음영*/
+            text-shadow: 2px 2px 2px gray;
+        }
+/* 선택자를 , 로 구분해서 동시 적용 가능 */
+        p,span {       /* 태그와 태그 */
+            font-style: italic;
+        }
+
+        h1,h2,h3,h4,h5,h6{
+            font-weight: normal;
+        }
+
+        .orang,#big{ /*클래스와 아이디*/
+           
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- dic<(ul>li*3)+div+p+span -->
+    <!-- 부모 태그에 클래스를 걸면 자식 태그에 상속됨 -->
+    <div class="shadow">
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li class="orang reverse" id="big">오렌지</li>
+        </ul>
+        <div class="reverse">당근</div>
+        <p>토마토</p>
+        <span class="orang">오렌지</span>
+    <!-- h1.reverse#small -->
+        <h1 class="reverse" id="small">파인애플</h1>
+    <!-- h2.shadow.reverse -->
+        <h2 class="shadow reverse">파인애플</h2>
+    </div>
+<!-- 오렌지를 class 이름 orang으로 그룹화 -->
+</body>
+</html>    
