@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* 앞에가 조건, 마지막이 타겟 */
+        /* div.orang은 일치선택자 */
+        /* div > orang은 직속자식 선택 */
+        /* div .orang은 후손 선택자(모든 후손을 선택)*/
+        div .orang  {
+            color: orange;
+        }
+        body span.orang {
+            background: red;
+        }
+        body div ul .orang {
+            background: green;
+        }
+        /* class shadow의 모든 후손 */
+        .shadow * {
+            font-weight: bold;
+        }
+        /* .shadow > * : class shadow의 모든 자식 */
+
+</style>
+
+</head>
+<body>
+
+    <em>안뇽안뇽</em>
+
+    <div class="shadow">
+        <em>메롱메롱</em>
+        <ul>
+            <li id="apple">사과</li>
+            <li>딸기</li>
+            <li class="orang reverse" id="big">오렌지</li>
+        </ul>
+        <div class="reverse">당근</div>
+        <p>토마토 <em>마토</em> </p>
+        <span class="orang">오렌지</span>
+        
+    </div>
+
+</body>
+</html>    
