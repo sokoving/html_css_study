@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .parent {
+            width: 500px;
+            height: 300px;
+            border: 4px solid blue;
+            background: skyblue;
+        }
+
+        .child {
+            background: orange;
+            height: 200px;
+            /* width: 100%; 안 써도 부모값의 100%가 기본으로 설정돼 있따*/
+            max-width: 500px; /*최대 제한*/
+            min-width: 200px; /*최소 제한*/
+            /* ex) 이미지 파일이 너무 쪼그라들어서 픽셀 깨지지 않게 하기 */
+        }
+    </style>
+
+</head>
+<body>
+ 
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+</body>
+</html>

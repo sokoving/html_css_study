@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* 
+px : 고정 길이, 절대 수치
+    디바이스마다 px의 크기는 다를 수 있다.
+    정확한 수치를 써야 할 때 사용.
+% : 부모 요소 대비 비율
+    반응형 웹에서 유용하다.
+px와 %는 단위가 들어가는 모든 수치에서 쓸 수 있다.
+*/
+        div{
+            border: 2px solid gray;
+        }
+
+        .root{
+            width: 80%; /*.root의 부모는 body
+                          전체 화면의 80% */
+        }
+        .parent{
+            width: 50%;
+        }
+        .child{
+            width: 50%;
+        }
+    </style>
+
+
+</head>
+<body>
+<!-- .root>.parent>.child*2 -->
+    <div class="root">root
+        <div class="parent">parent
+            <div class="child">child1</div>
+            <div class="child">child2</div>
+        </div>
+    </div>
+    
+</body>
+</html>

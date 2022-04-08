@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {      /*기본값 없애기*/
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background: orange;
+            width: 100wh;        /*가로는 기본값이 부모의 100%*/
+                                 /*그래서 %나 wh나 비슷*/
+            height: 80vh;       /*세로는 기본값이 0 > % 못 씀*/
+                                /*그래서 %  대신 vh(view height) 씀*/
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="box">box</div>
+    
+</body>
+</html>

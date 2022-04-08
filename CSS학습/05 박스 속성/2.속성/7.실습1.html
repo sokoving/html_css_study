@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <style>
+        /* 큰 틀에서 작은 디테일 순서로
+            바탕색을 먼저 칠해주며 보기 편함 */
+        section {
+            width: 550px;
+            margin: 10px auto;
+            border: 3px double #123456;
+        }
+
+        section h1 {    /*선택자 점수는 높게 나오게*/
+            font-weight: bold;
+            font-size: 20px;
+            background: #abcdef;
+            text-align: center;
+            padding: 15px 0;
+            border-bottom: 3px solid #123456;
+        }
+
+        section .title {
+            padding: 10px;
+            }
+
+        div+div {
+            border-top: 1px dotted #123456;
+        } 
+
+
+        /* section .title:first-child  >> 안 됨
+            section의 first-child를 먼저 찾고
+            .title이 맞아야 찾아야 작동됨
+           
+           section .title:nth-of-type(1)
+           section .title:last-child
+            이건 됨.
+            */
+        
+        section .title h2 { /*조상을 적당히 명시해서 점수 올리기*/
+            font-size: 17px;
+            font-weight: bold;            
+        }
+
+        section .title p {
+            font-size: 12px;
+            padding-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section>
+        <h1>속 담 풀 이</h1>
+        <div class="title">
+            <h2>말 한마디에 천냥 빚 갚는다.</h2>
+            <p>
+                생각해보지 않고 나오는 대로 말하다가 실수하면 상대의 마음에 아픔을 남기게 된다.
+            </p>
+        </div>
+        <div class="title">
+            <h2>웃는 얼굴에 침 못 뱉는다.</h2>
+            <p>
+                호의적인 의사소통 방법은 자기 말만 하는 것보다 좋은 결과로 이어진다.
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
