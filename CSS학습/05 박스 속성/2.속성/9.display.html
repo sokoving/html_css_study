@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/*      span > 인라인 속성
+              가로세로 길이 지정 안 됨 
+       disply로 속성을 바꿀 수 있다 */
+        #hello {
+            background: red;
+            font-size: 2em;
+            color: yellow;
+            padding: 20px;
+            width: 400px;
+            height: 200px;
+            display: block;
+        }
+
+/*       a태그의 블록화 > 클릭의 편의성을 위해 
+               block > 수직배치
+        inline-black > 수평 배치  */
+        a {
+            background: yellowgreen;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+        
+        /* input은 inline-block이 기본값 */
+        .Box input {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        .Box input:nth-child(3) {
+            opacity: 0;
+        }
+/* 요소 안 보이게 하는 법  > 인터랙션과 같이 사용
+           display: none; > 화면에서 삭제
+           opaacity: 0;   > 자리는 남아 있음 */
+
+    </style>
+
+</head>
+<body>
+    
+    <span id="hello">안녕하세요. </span>
+
+    <a href="#">회원가입</a>
+    <a href="#">로그인</a>
+
+    <div class="Box">
+        <input type="text" value="1">
+        <input type="text" value="2">
+        <input type="text" value="3">
+        <input type="text" value="4">
+        <input type="text" value="5">
+    </div>
+
+    <script>    /클릭하면 사라짐/  
+        hello.onclick = e => {
+            hello.style.display = 'none';
+        };
+    </script>
+
+
+</body>
+</html>

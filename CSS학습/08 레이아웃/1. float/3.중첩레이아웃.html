@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* 중첩레이어
+ 부모 박스 안에 자식 박스가 중첩
+ 부모 박스 - 수직 / 자식 박스 - 수평 
+>자식을 띄우면서 부모의 높이 초기화되는 버그가 생김
+ 1. 해제 용도의 박스 추가 생성
+   >> html 구조적 문제가 있어 안 쓰는 게 좋음
+ 2. 부모 박스에 overflow: hidden; 추가
+   >> 간단하긴 하지만 해당 기능을 필요할 때 못 쓴다.
+ 3. 가상박스를 추가해 그 박스에 clear를 건다.
+    >해제 용도의 가상의 클래스(clearfix) 생성, clear를 건다.
+    >해제하고 싶은 요소에 clearfix 클래스 부여
+   >> 해제해야 할 게 많을 때 좋음                 */
+        .container {
+            width: 700px;
+            padding: 20px;
+            border: 5px dotted red;
+            margin: 20px;
+          /* overflow: hidden; 
+                > 편하긴 하지만 해당 기능 필요할 때 쓰기 힘듬*/ 
+        }
+
+        .container2 {
+            width: 700px;
+            padding: 20px;
+            border: 5px dotted blue;
+            margin: 20px;
+        }
+        .container3 {
+            width: 700px;
+            padding: 20px;
+            border: 5px dotted pink;
+            margin: 20px;
+        }
+
+/* clear 용도의 가상의 클래스를 먼저 만든 후 해제할 요소에 클래스 지정 */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            border-radius: 20px;
+            background: yellowgreen;
+            float: left;
+        }
+        .cbox {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+   <!-- <div class="cbox"></div>
+      해제 용도의 박스 생성 > html 구조적 문제가 생기기 때문에 안 씀-->
+    </div>
+
+    <div class="container2 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+    <div class="container3 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

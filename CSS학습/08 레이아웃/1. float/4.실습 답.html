@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* 컨테이너에 박스를 딱 맞게 넣고 싶어요 */
+        .container {
+            /* 세로 지정 안 하면 텍스트에 맞게 들어감(auto) */
+            width: 500px;       
+            border: 2px solid red;
+        }
+
+        .box {
+            /* width 500px를 100%로 놓고 본다 
+                20-2-0.4 */
+            width: 17.6%;
+            height: 100px;
+            border: 2px solid yellow;
+            background: orange;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 2%;
+        }
+
+        .box:first-child {
+            margin-left: 2%;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            width: 550px;
+            height: 350px;
+            border: 4px dashed gray;
+
+            background-color: orange;
+            background-image: url("../이미지파일/sky.jpg");
+            background-size: 150px 150px;
+            background-repeat: no-repeat;
+            /*x축 y축 */
+            background-position: 400px 50px;    
+
+            background: orange no-repeat
+            url('../이미지파일/sky.jpg') left center / 150px 150px;
+            /* backround 단축: 순서 상관 없으나 position / size */
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>
