@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <!--         
+1. nav 안의 ul을 수평 > nav에 clearfix
+2. ul 안의 li를 수평 > ul에 clearfix
+     -->
+
+    <style>
+
+        nav {
+            background-color: pink;
+        }
+
+        nav ul {
+            float: left;
+        }
+
+        .gnb {
+            background: yellowgreen;
+        }
+
+        .tnb {
+            background: olive;
+        }
+ 
+        .gnb li {
+            float: left;
+        }
+
+        .tnb li {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: orangered;
+            border-bottom: 1px solid red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <nav class="clearfix">
+        <ul class="gnb clearfix">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BOARD</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>
+        <ul class="tnb clearfix">
+            <li><a href="#">검색</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

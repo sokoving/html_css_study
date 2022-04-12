@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .root {
+            width: 600px;
+            height: 500px;
+            border: 4px dashed orange;
+            padding: 100px;
+/* 후손의 positon: absoute의 이동 기준을 root로 지정 */
+            /* position: absolute; */
+        }
+
+        .parent {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed blue;
+            padding: 50px;
+/* 후손의 positon: absoute의 이동 기준을 parent로 지정
+    조상 둘 다 걸려 있으면 가까운 부모 쪽을 기준으로 함*/
+            position: relative;
+        }
+
+        .child {
+            width: 120px;
+            height: 80px;
+            border: 4px dashed red;
+            background: tomato;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 80px;
+        }
+/* absolute 건 클래스를 만든 후 대상 요소에 클래스 넣기 */
+        .abs {
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+        }
+
+        .center-box{
+/* 박스 x, y축 중앙정렬 
+    x축 [margin: # auto #]
+    x, y축 [아래 4줄이 공식] */
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+}
+    </style>
+</head>
+<body>
+
+    <div class="root">
+        <div class="parent">
+            <div class="child center-box">1</div>
+            <div class="child abs">2</div>
+            <div class="child">3</div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            height: 10000px;
+        }
+
+        .container {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed #000;
+            margin: 100px;
+        /*.box의 postion 범위를 container로 제한*/
+            position: relative;
+        }
+
+        .box {
+            width: 150px;
+            height: 100px;
+            border: 1px solid red;;
+            background: red;
+
+/* position
+    relative : 상대적 
+    absolute : 절대적(광고 배너 등에 사용)
+        top/bottom , left/right 중 하나씩 쓰기*/
+            position: absolute;
+            bottom: 100px;
+            right: 200px;
+        }
+        
+        .banner {
+        width: 100px;
+        height: 600px;
+        border: 1px solide black;
+        background: orange;
+/*  fixed : 스크롤 따라다니기(광고, 헤더에 사용) */
+        position: fixed;
+        top: 10%;
+        right: 5%;
+        }
+
+        </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+    <aside class="banner"></aside>
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 3000px;
+        }
+
+        header {
+            /* background: orange; */
+            border-bottom: 2px solid gray;
+
+/* fixed
+  부모의 포지션에 상관하지 않고 언제나 브라우저 전체를 기준으로 위치
+  스크롤에 상관없이 항상 브라우저의 같은 자리                        */
+            position: fixed;
+            top: 0;                 /*언제나 위에 고정*/
+            width: 100%;           /* 주의 : 포지션을 걸면 공백 무시됨 > 가로 지정 */
+
+        }
+
+        header h1 {
+            /* background: greenyellow; */
+            margin: 20px 20px 30px;
+            padding: 0;
+            float: left;
+            font-size: 40px;
+        }
+
+        header ul {
+            /* background: aqua; */
+            margin: 30px 0;
+            padding: 0;
+            float: right;
+        }
+         header ul li {
+            list-style: none;  /* li에 붙는 땡땡 점 빼기 */
+            /* border: 1px solid #000; */
+            float: left;
+            margin-top: 10px;
+            margin-right: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+         }
+
+        .clearfix::after  {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header class="clearfix">
+        <h1>My Home</h1>
+        <ul class="clearfix">
+            <li>소개</li>
+            <li>커뮤니티</li>
+            <li>자료실</li>
+            <li>마이페이지</li>
+        </ul>
+    </header>
+
+</body>
+</html>
