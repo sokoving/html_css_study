@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <style>
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+/* 1. html 구조 잡기: */
+/* 2. 가장 큰 영역인 header .container hooter 영역 잡기 */
+        header {
+            width: 30%;
+            position: fixed;
+        }
+
+        .container {
+            background: lightgrey;
+            height: 1000px;
+            width: 70%;
+            margin-left: 30%;
+        }
+
+        header .gnb {
+            width: 130px;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, 70%)
+
+        }
+
+        header .gnb li {
+            margin-bottom: 2px;
+            background: blue;
+        }
+
+        header .gnb a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        footer {
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="gnb">
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p>본문 내용</p>
+    </div>
+
+    <footer>
+        <address>Copyright Allright Reseved.</address>
+    </footer>
+
+</body>
+
+</html>

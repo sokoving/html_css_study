@@ -1,0 +1,142 @@
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body {
+    background: gray;
+}
+
+#wrapper {
+    background: white;
+    width: 700px;
+    margin: 0 auto 0;
+}
+/* header */
+header {
+    background: orange;
+    padding: 10px 0 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 4em;
+    color: white;
+    }
+
+header .header-musee {
+    color: white;
+    font-size: 1.1em;
+    padding: 15px 0 10px;
+}
+
+header .header-royal {
+    background: lightgrey;
+    padding: 7px;
+    font-size: 13px;
+    color: gray;
+}
+
+
+/* container */
+
+.container {
+    background: white;
+}
+/* container - menu */
+.menu {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+.menu p {
+    background: darkred;
+    line-height: 2;
+    padding-left: 10px;
+    color: white;
+}
+.menu li {
+    padding: 10px;
+}
+.menu a {
+    color: black;
+    font-size: 0.9em;
+}
+/* container -content */
+.content {
+    background: lightgray;
+    width: 50%;
+    float: left;
+    color: #123456;
+}
+.content .art {
+    margin: 10px;
+}
+.content .art .title {
+    background: #123456;
+    color: white;
+    font-weight: bold;
+    padding: 7px;
+    box-sizing: border-box;
+}
+.content .art .artist {
+    padding: 15px 0;
+    font-weight: bold;
+}
+.content .art .art-explain {
+    font-size: 0.9em;
+    text-indent: 5px;
+    padding-bottom: 10px;
+}
+
+
+    /* banner */
+.banner {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.banner .banner-1st {
+    font-size: 1.1em;
+    line-height: 1.4;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.banner .banner-1st b {
+    color: gray;
+    font-size: 1.2em;
+}
+.banner .banner-1st em {
+    color: orange;
+    font-size: 1.2em;
+}
+
+.banner .banner-2nd li {
+    margin: 20px 0;
+}
+.banner .banner-2nd a {
+    color: black;
+    font-weight: bold;
+}
+.banner .banner-2nd  p {
+    font-size: 0.8em;
+    margin-top: 5px;
+    line-height: 1.2;
+}
+
+/* footer */
+footer {
+    background: #123456;
+    color: white;   
+    font-size: 0.9em;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+}
