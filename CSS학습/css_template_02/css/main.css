@@ -1,0 +1,70 @@
+/* reset */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* common style */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body {
+    background: gray;
+}
+
+#wrap {
+    background: rgb(241, 241, 241);
+    width: 2000px;
+    margin: 0 auto;
+}
+
+/* header : logo + menu*/
+header {
+    /* background: yellowgreen; */
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+}
+    /* logo */
+header .logo {
+    background: rgb(241, 241, 241);
+    margin: 50px 0;
+}
+
+header .logo img {
+    width: 100%;
+}
+    /* menu */
+header .menu {
+    background: rgb(39, 39, 39);
+    text-align: center;
+}
+
+header .menu li {
+    padding: 20px;
+}
+
+header .menu a {
+    color: white;
+    font-size: 2.3em;
+    font-weight: bold;
+}
+
+/*끝 header  */
+
+/* container : img-slide + content + footer */
+.container {
+    background: yellow;
+    width: 80%;
+    float: right;
+}
+    /* img-slide */
+
+    /* content : notice + banner + shortcut */
+
+    /* footer */
+
+/*끝 container  */
