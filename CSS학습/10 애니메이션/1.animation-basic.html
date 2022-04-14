@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* animation : 움직임에 디테일을 주고 싶을 때 */
+        .box {
+            width: 100px;
+            height: 100px;
+            background: greenyellow;
+        }
+/* 2. animation을 적용 : name, duration 필수 */
+        .box:hover {
+            animation-name: grow;
+            animation-duration: 2s;
+            animation-delay: 0.5s;           /*실행 지연*/
+            animation-timing-function: ease; /*진행 속도*/
+            animation-iteration-count: infinite; 
+            /*마우스를 뗄 때까지 반복, 횟수 지정도 됨
+                           주의! 복잡한 사잍트에서 infinite을 걸면 부하가 심해짐
+                                그리고 짜증남*/
+
+            /* 단축 속성: duration delay 빼고는 순서 상관 없음  */
+        
+        }
+
+/* 1. animation을 먼저 만들어야 함 */
+        @keyframes grow {
+            0% {
+                width: 100px;
+                background: greenyellow;
+            }
+            50% {
+                width: 500px;
+                background: orange;
+            }
+            100%{
+                width: 300px;
+                background: black;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

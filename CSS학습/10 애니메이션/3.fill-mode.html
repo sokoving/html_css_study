@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: 30px;
+
+            animation: moving 2s 2;
+            animation-fill-mode: both;
+            /* 값  기존 위치    애니메이션 시작   애니메이션 끝
+            none :  기존 위치 
+        forwards :  기존 위치
+       backwards : 애니메이션 시작 위치
+            both : 애니메이션 시작 위치 
+            */
+        }
+
+        @keyframes moving {
+            0% {
+                background: skyblue;
+                transform: translate(0, 100%);
+            }
+            100% {
+                background: yellowgreen;
+                transform: translate(100%, 100%);
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 50px;
+/* trasition */
+            /*transition 사용할 속성 이름*/
+            transition-property: width background; 
+            transition-property: all; /*전 속성에 적용(기본값)*/ 
+            /* trasition이 일어나는 시간 */
+            transition-duration: 3s;  /*1000ms=1s*/
+            /* transition 1초 뒤에 적용 */
+            transition-delay: 1s;
+            /* 애니메이션 진행 속도 조절*/
+            transition-timing-function: ease;
+        }
+
+        .box:hover {
+            width: 300px;
+            background: skyblue;
+        }    
+
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

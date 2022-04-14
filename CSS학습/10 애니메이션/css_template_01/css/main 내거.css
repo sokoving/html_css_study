@@ -1,0 +1,133 @@
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 전체 */
+body a{
+    text-decoration: none;
+    color: gray;
+}
+.all-wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+/*----------전체 끝 */
+/*-헤더 */
+#header-wrap {
+    background: white;
+    width: 20%;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#header-wrap h1 {
+    margin: 20px 0;
+}
+#header-wrap ul {
+    background: rgb(34, 34, 34);
+    box-sizing: border-box;
+    padding: 15px;
+}
+#header-wrap a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+#header-wrap li {
+    text-align: center;
+}
+#header-wrap li+li {
+    margin-top: 20px;
+}
+/*---------헤더 끝 */
+/* 메인 */
+#main-wrap {
+    width: 80%;
+    float: left;
+    margin-bottom: 10px;
+}
+/* main-top */
+#main-wrap .main-top {
+    height: 370px;
+    background: url('../images/img1.jpg') no-repeat;
+    position: relative;
+}
+
+#main-wrap .main-top h2 {
+    background-color: gray;
+    opacity: 0.5;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: inline;
+    padding: 18px 100px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%)
+}
+/* main h3 */
+#main-wrap h3 {
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+}
+#main-wrap .h3 a {
+    background: black;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+
+/* main 공지사항 */
+#main-wrap .announcement {
+    width: 40%;
+    float: left;
+    box-sizing: border-box;
+}
+#main-wrap .announcement li:nth-child(even) {
+    background: lightgrey
+}
+#main-wrap .announcement li {
+    padding: 10px 0;
+}
+#main-wrap .announcement p {
+    float: right;
+    color: gray;
+}
+/* main 갤러리 */
+#main-wrap .gallery {
+    width: 40%;
+    float: left;
+    box-sizing: border-box;
+    margin: 0 2%;
+}
+
+#main-wrap .gallery li {
+    width: 30%;
+    height: 95px;
+    margin: 20px 1%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    float: left;
+}
+#main-wrap .gallery li:first-child {
+    margin-left: 3%;
+}
+
+#main-wrap .galler-icon1 {
+    background: #000;
+}
+
+/* main 바로가기 */
+#main-wrap .shortcut {
+    background: greenyellow;
+    width: 16%;
+    float: left;
+    box-sizing: border-box;
+}
+
+/*----------메인 끝 */
