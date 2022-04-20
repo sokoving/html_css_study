@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- 수평배치를 하는 법 
+display: inline-blok;  </div>와 <div> 사이의 공백이 마진이 나옴
+         inline-flex;  .container의 </div>  와 <div> 사이의 공백이 마진으로 나옴
+
+flot:left;     수평배치할 자식 요소에 건다
+display:flex;  수평배치할 영역에(부모 요소에) 건다
+              부모 요소들을 수평배치할 때는 부모의 부모 요소를 만들어 건다.
+-->
+<!-- display 간단 정리
+item                수평배치할 요소들(자식 요소)
+container           수평배치할 영역(부모 요소)
+주 축(main-axis)    item이 쌓이는 방향이 되는 축(ex. →)
+교차 축(cross-axis) 주 축에 크로스되는 축       (ex. ↓)
+                    여백이 부족해서 줄바꿈되는 방향
+
+display             flex container를 정의
+
+flex-direction      flex items의 주 축을 설정
+flex-wrap           flex items의 줄 바꿈을 설정
+flex-flow           direction과 -wrap의 단축 속성
+
+justify-content     주 축의 정렬 방법을 설정
+align-content       교차 축의 정렬 방법을 설정 (2줄 이상)
+align-items         교차 축에서 items의 정렬 방법을 설정 (1줄)
+            -->
+
+    <style>
+        .container-box{
+            display: flex;
+        }
+        .container{
+            width: fit-content;
+            border: 2px solid red;
+            padding: 20px;
+
+            display: flex;
+        }
+
+        .item{
+            width: 100px;
+            height: 100px;
+            border: 2px solid orange;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container-box">
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</div>
+</body>
+</html>

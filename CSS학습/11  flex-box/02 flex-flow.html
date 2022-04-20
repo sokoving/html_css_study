@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- flex의 속성
+ flex-wrap: items의 줄 바꿈을 설정
+    nowrap;     기본값
+                모든  item들은 한 줄에 표시(item 가로 변형)
+    wrap;       imte들은 여러 줄로 표시
+                 item의 가로를 유지하며 자리 없으면 아래로 내려감
+    wrap-reverse 수직 순서가 아래서 위로> 
+ 
+flex-direction: row;(기본값) > 왼쪽 위부터 수평으로 순차 배치
+                row-reverse; > 오른쪽 위부터 수평으로 순차 배치
+                column; > 위부터 수직 배치
+
+flex-flow: wrap과 direction을 함께 쓰는 단축 속성
+-->
+
+    <style>
+        .container {
+            border: 1px solid #000;
+            padding: 10px;
+
+            display: flex;
+            flex-wrap: wrap-reverse;
+            flex-direction: row;
+
+            flex-flow: wrap column;
+
+        }
+        .item {
+            width: 150px;
+            height: 100px;
+            border: 4px dashed red;
+            border-radius: 10px;
+            font-size: 40px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+</body>
+</html>
