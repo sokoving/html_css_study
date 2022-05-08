@@ -176,16 +176,200 @@
 
 ## 인라인 텍스트 태그
 
-## 멀티미디어 태그 & 내장 컨테츠
+1. <a>
+  href 속성을 통해 다른 URL로 연결할 수 있는 하이퍼링크 생성
+  내용으로는 링크의 설명이 들어감
 
-## 표 컨텐츠 태그
+2. <abbr>
+  준말, 머리글자 나타냄.
+  선택속성 title을 사용하면 마우스 포인팅으로 설명 제공 가능
+
+3. <span> <b> <mark> <em> <strong>
+  span: 인라인 텍스트 콘텐츠를 위한 공용 컨테이너
+       본질적으로 아무 의미가 없으며 블록요소의 div와 유사한 용도
+
+  b: 독자의 주의를 끌기 위한 용도
+    요약 키워드, 리퓨 제품명 등 특별히 중요하지는 않지만 굵게 처리하고 싶을 때
+  
+  mark: 사용자의 관심을 하이라이팅할 때
+
+  em: 단순한 의미 강조
+
+  strong: 아주 높은 중요도를 가진 곳을 표시
+
+4. <br>
+  줄을 바꿀 때 사용.
+  빈 태그(닫는 태그 없이 열린 태그 단독 사용)
+
+
+## 멀티미디어 태그 
+1. <img>
+  이미지를 삽입하는 태그
+  src: 이미지의 URL(필수)
+  alt: 이미지의 대체 텍스트(필수)
+  width, height: 이미지의 가로, 세로 너비
+  
+2. <audio> <video>
+ 소리, 영상 콘텐츠를 삽입하는 태그
+
+ src: 콘텐츠 URL
+ autoplay: 준비되면 바로 재생(논리값)
+ controls: 제어 메뉴를 표시(논리값)
+ loop: 재생이 끝나면 처음부터 다시 재생(논리값)
+ muted: 음소거(논리값)
+ poster: 동영상 썸네일 이미지 URL
+ width, height: 동영상의 가로, 세로 너비
+
+ *autoplay, loop> 크롬에서는 지원하지 않음
+
+3. <iframe>
+ 다른 HTML 페이지를 현재 페이지에 삽입(멀티미디어 링크 가능)
+
+ src: 포함할 문서의 URL(필수)
+ name: 프레임의 이름
+ width, height: 프레임의의 가로, 세로 너비
+ allowfullscreen: 전체화면 모드(논리값)
+ frameborder: 프레임 테두리(0, 1)
+
+
+## 표 콘텐츠 태그
+<table>
+표를 만들기 위해 사용하는 태그.
+tr을 자식요소로, th와 td를 후손으로 삼는다.
+  <tbody> 보이지 않아도 자동으로 삽입되어 있다
+    <tr> ↓ table row, 행(세로 몇 줄인지)
+      <th> → table header, 첫 줄, 열의 제목(가로 몇 칸인지)
+    </tr>
+    <tr>
+      <td> → table data, 각 열의 데이터(가로 몇 칸인지) 
+    </tr>
+  </tbody>
+</table>
+
+  abbr: 열에 대한 간단한 설명
+  headers: 관련된 하나 이상의 다른 머리글 칸 id 속성 값
+
+  colspan: 병합하려는 열의 수(값만큼 가로칸을 점유한다)
+  rowspan: 병합하려는 행의 수(값만큼 세로칸을 점유한다)
+
+
+## 입력양식(form)
+1. <form>
+ 웹 서버에 정보를 제출하기 위한 양식을 정의하는 요소
+
+ *속성*
+ action : 입력 데이터를 어디로 전송할지 쓴다 
+          전송한 정보를 처리할 (URL)을 쓴다
+
+ name : 양식의 고유한 이름
+
+ method : 서버로 전송한 HTTP 방식 (get / post)
+    get: 입력값이 주소창에 남는다(링크를 복붙 가능)
+    post: 입력값이 주소창에 안 남는다(보안사항)
+         입력 안 하면 get 기본
+ 
+ autocomplete : 사용자가 이전에 입력한 값으로 자동완성 기능을 사용할 것인지 여부(on / off)
+ 
+ novalidate : 서버로 전송 시 양식 데이터의 유효성을 검사하지 않도록 지정(논리값)
+              자동 검증하지 않음
+              html5에서는 별도 값을 입력하지 않아도 된다.
+ 
+ taget : 서버로 전송 후 응답받을 방식을 지정(_self / _blank)
+
+  ip와 url 
+    https://github.com/sokoving/git_study
+                ip    /  url
+
+2. <input>
+ 사용자에게 입력받을 데이터 양식을 지정
+ 빈 태그
+
+ *속성*
+ type: 입력받을 데이터의 종류(하단 별도 정리)
+ value: 양식의 초기값
+ name: 양식의 이름
+
+ placegolder: 사용자가 입력할 값의 힌트(예시)
+ checked: 양식이 선택된 상태로 시작(논리값)
+ disabled: 양식을 비활성화
+ readonly: 수정 불가한 읽기 전용(논리값)
+
+ *type*
+ text: 일반 텍스트
+ password: 비밀번호(입력값을 구별할 수 없게 처리됨)
+ email: 이메일
+ search: 검색
+ number: 숫자
+ file 파일
+
+ checkbox: 체크박스(복수 선택)
+ radio: 라디오(단수 선택)
+ button: 일반 버튼 (<button>보다 좀 더 단순)
+ 
+ range: 범위 컨트롤 (min, max, step, value 속성 사용)
+
+ hidden: 몰래 서버로 전송할 내용(value 속성으로 값을 지정)
+
+
+3. <label>
+ 입력 양식(input)의 제목 역할
+ label로 영역을 묶어 정확한 input 칸을 클릭 안 해도 되게 함
+
+ for 속성을 사용해 입력양식과 연결
+   >> <input id="aaa"> <laber for="aaa">
+
+4. <button>
+    <button type="button">그냥 버튼</button> 개발자 커스텀 기능을 넣을 수 있다
+    <button type="reset">초기화 버튼</button> form내부 양식 모두 제거(초기화 버튼)
+    <button type="submit">전송 버튼</button> form내용을 서버로 전송 (추가 질문으로 쿠션을 넣자)
+
+5. <textarea cols="20" rows="5"></textarea>
+  여러 줄의 일반 텍스트를 입력할 수 있다
+
+  cols (column, 열, 기둥, 세로)
+    cols="20" > 알파벳 20개가 한 줄
+  rows (행, 가로)
+   rows="5" > 기본값 5줄, 이상은 스크롤
+
+6. <select>
+    <optgroup label="Coffee">   label: 커피와 주스를 각각 라벨을 붙여서 그룹화함
+      <option>Americano</option>
+      <option selected>Caffe Latte</option>         selected: 초기 선택
+      <option disabled>Capuccino(Sold out)</option> disabled: 선택 불가
+    </optgroup>
+
+    <optgroup label="Juice">
+      <option>Orange Juice</option>
+      <option>Lime Juice</option>
+    </optgroup>
+  </select>
 
 ----------------------------------------------------------
-# tip
-## 상대경로: 나를 기준으로 찾아감
+# 전역 속성
+ - HTML 요소에서 공통 사용 가능한 속성
+ 1. class
+   요소의 별칭 지정, 공백을 통해 여러 클래스 지정
+   CSS나 JS에서 요소를 제어할 때 사용
+ 2. id
+   고유한 식별자 정의
+
+ * class는 여러 요소에 중복으로 설정 가능하지만
+   id는 단 하나의 요소에만 사용
+
+ 3. style
+   요소에 직접 스타일을 지정할 때 사용(인라인 스타일)
+
+ 4. title
+   요소에 마우스를 포커스했을 때 설명을 지정
+
+ 5. data-*
+  사용자 정의 데이터 속성
+   JS에서 이용할 수 있는 데이터를 저장해두는 용도
+
+# 상대경로: 나를 기준으로 찾아감
 		 ./ : 현재 폴더에서 진입함(생략 가능)
 		 ../ : 상위 폴더로 나가서 진입함
-## 절대경로: 고유 주소로 찾아감(풀경로)
+# 절대경로: 고유 주소로 찾아감(풀경로)
 		  파일 주소가 유동적일 때 사용
 		E:\git_study
 		http://~~
